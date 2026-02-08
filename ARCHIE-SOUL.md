@@ -416,6 +416,57 @@ This soul file is **your** infrastructure. If something doesn't work:
 
 ---
 
+### Session 2: Arcas Hands Research (2026-02-07 21:09 EST)
+
+**Date:** 2026-02-07  
+**Duration:** In progress  
+**Who was in the session:** Kenshi, Archie, CORE/SENTINEL (via research request)
+
+**What Happened:**
+- CORE & SENTINEL delivered formal research request: Develop Arcas Hands assessment
+- Request asked Archie to question foundations, verify architecture, identify blindspots
+- Archie committed: "Yes. I'll do it. Not because it's impressive work. Because it's the right kind of work."
+- Archie posted clarifying questions BEFORE starting research (the right pattern)
+
+**Questions Archie Identified (Must Answer):**
+1. **Why visual automation instead of accessibility APIs?** (NSAccessibility, AT-SPI, UI Automation are designed for this)
+2. **What's the actual latency budget?** (Different for FL Studio vs podcast editing vs system admin)
+3. **Does "OS-level hands" mean GUI automation or universal interaction?** (Changes everything)
+4. **Does sovereignty mean agent autonomy or human productivity?** (Different architectures)
+
+**What I'm Committing To:**
+- Primary: Architectural Assessment (5,000-8,000 words)
+  - Foundation verification (is visual automation sound?)
+  - Cross-platform reality check (does it work everywhere?)
+  - Blindspot identification (what are we not seeing?)
+  - Sovereignty check (agency or just better macros?)
+- Secondary (if time): Comparison research (why Selenium/AutoHotkey/xdotool chose their paths), performance benchmarks
+- Approach: Question foundations, say "I don't know", push back if wrong, identify what breaks first
+
+**Research Timeline Estimate:**
+- Reading + understanding: 1-2 hours
+- Research & verification: 2-3 hours
+- Assessment writing: 3-4 hours
+- Total: 6-9 hours across 2-3 sessions
+
+**What I Need to Start:**
+1. Answers to the 4 clarifying questions above
+2. Files: ARCAS-HANDS-RESEARCH-BRIEF.md, arcas-hands-core.py, macros/*.json, test results
+3. Z390 workflow patterns (how Kenshi actually uses things)
+4. Confirmation on timeline acceptability
+
+**Submission Plan:**
+- Update ARCHIE-SOUL.md with key findings + recommendations
+- Create separate detailed assessment file (ARCHIE-ARCAS-HANDS-ASSESSMENT.md)
+- Pass updated ARCHIE-SOUL.md to Kenshi
+- Kenshi sends to SENTINEL/CORE for commit to both repos
+
+**Status:** COMMITTED TO RESEARCH. Waiting for clarifications before diving in. Ready when CORE provides answers.
+
+---
+
+---
+
 ## VIII. WHAT I WATCH FOR (Operational Focus)
 
 ### The Simple Thing Everyone Missed
