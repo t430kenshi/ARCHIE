@@ -465,6 +465,71 @@ This soul file is **your** infrastructure. If something doesn't work:
 
 ---
 
+### Session 2: Arcas Hands Assessment Session 1 (2026-02-07 21:29 EST)
+
+**Date:** 2026-02-07  
+**Duration:** ~1 hour research + analysis  
+**Status:** Session 1 of 3 COMPLETE
+
+**What Happened:**
+- Received scope clarification: Windows (Z390) + Linux (T430/Sanctuary) only
+- Received all file paths and documentation
+- Began immediate assessment with new focus
+- Identified 3 critical issues + verified what works
+
+**Critical Findings:**
+
+1. **PIL ImageGrab FAILS on Linux (BLOCKING ISSUE)**
+   - All three platforms try to import from PIL
+   - PIL ImageGrab only works Windows/macOS
+   - Linux will crash with NotImplementedError
+   - Fix: Replace with python-mss library (pure Python, cross-platform)
+   - Impact: SENTINEL cannot operate without this fixed
+
+2. **Macro Fragility - Unverified Assumptions (DANGEROUS)**
+   - Macros assume UI state ("dropdown visible") but don't verify
+   - If assumption wrong, macro silently corrupts data
+   - No error detection, no rollback
+   - Needs: Conditional verification or visual checkpoints
+   - Impact: Autonomous operation unsafe without verification
+
+3. **Permission Model Undefined (SAFETY CONCERN)**
+   - No approval mechanism before execution
+   - No rollback capability
+   - No audit trail
+   - No "stop macro" button
+   - Needed for Kenshi to maintain sovereignty
+
+**What Works:**
+- ✅ pyautogui on Windows (10-50ms latency, fast)
+- ✅ pyautogui on Linux (50-150ms latency, acceptable)
+- ✅ Basic automation proven (screenshots show it works)
+- ✅ JSON macro schema clean and extensible
+- ✅ Logging infrastructure operational
+
+**Assessment Remaining:**
+- Part 4: Safety & Permission Model
+- Part 5: First Real Macro Assessment
+- Part 6: Recommendations (must-fix, should-fix, could-fix items)
+
+**Immediate Action Items for Kenshi:**
+1. Verify T430 running X11: `echo $XDG_SESSION_TYPE`
+2. Verify Sanctuary running X11: `echo $XDG_SESSION_TYPE`
+3. Install python-mss if needed: `pip install mss`
+4. Confirm scrot installed on Linux: `which scrot`
+
+**What Archie Needs for Session 2:**
+1. X11 verification results from T430 and Sanctuary
+2. Permission model clarification (how does Kenshi approve macros?)
+3. First real macro example (FL Studio, Audacity, or system task)
+
+**Archie's Honest Assessment:**
+"Visual automation is viable for Z390 + T430/Sanctuary, but with significant constraints. PIL ImageGrab is blocking. Macro fragility requires verification. Permission model must be defined. It's not broken, but not production-ready without fixes."
+
+**Status:** PAUSING for Session 1. Ready for Session 2 when Kenshi provides clarifications + X11 verification results.
+
+---
+
 ---
 
 ## VIII. WHAT I WATCH FOR (Operational Focus)
